@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default Theme (Dark) */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 400px;
+  transition: background 0.4s ease;
+}
+
+/* Header layout */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Display */
+#display {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  font-family: 'Courier New', monospace;
+  background: #111;
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  min-width: 250px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+#laps {
+  margin-top: 25px;
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 5px;
+  text-align: left;
+}
+
+#laps li {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+/* 🌞 Light Theme Styles */
+body.light {
+  background: linear-gradient(135deg, #f3f3f3, #e2e2e2);
+  color: #222;
+}
+
+body.light .container {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+body.light #display {
+  background: #fff;
+  color: #000;
+}
+
+body.light button {
+  background-color: #222;
+  color: #fff;
+}
+
+body.light button:hover {
+  background-color: #444;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  #display {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 1rem;
+  }
+}
